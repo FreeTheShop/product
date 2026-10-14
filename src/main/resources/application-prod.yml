@@ -1,0 +1,10 @@
+# Production. IDENTITY_ISSUER and IDENTITY_JWKS_URI must point at the real Identity.
+server:
+  forward-headers-strategy: native
+logging:
+  structured:
+    format:
+      console: ecs
+    ecs:
+      service:
+        name: product-service

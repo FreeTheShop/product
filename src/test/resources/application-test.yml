@@ -1,0 +1,14 @@
+management:
+  tracing:
+    sampling:
+      probability: 0.0
+springdoc:
+  api-docs:
+    enabled: true
+product:
+  rate-limits:
+    - name: shop
+      method: GET
+      path-prefix: /api/v1/products
+      capacity: 1000
+      period: 1m
